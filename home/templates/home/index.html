@@ -1,0 +1,29 @@
+ {% extends "home\base.html" %}
+ {% block start %}
+    <body>
+         <p>djngo tutorial</p>
+        <a href="/contact/">contact</a>
+        <br>
+        <a href="/about/">about</a>
+
+         <table>
+            <tr>
+              <th>sr.no</th>
+              <th>name</th>
+              <th>age</th>
+            </tr>
+            {% for peoples in people%}
+            <tr>
+              <td>{{forloop.counter}}</td>
+              <td>{{peoples.name}}</td>
+              <td>{{peoples.age}}</td>
+            </tr>
+            {% endfor %}
+            
+          </table>
+          
+       
+        <script src="" async defer></script>
+    </body>
+{% endblock %}
+ 
